@@ -1,7 +1,7 @@
 name: Deploy
 on: workflow_dispatch
 env:
-  ROLE_ARN: arn:aws:iam::${{ secrets.AWS_ID }}:role/${{ secrets.AWS_ROLE }}
+  ROLE_ARN: arn:aws:iam::${{ secrets.AWS_ID }}:role/${{ secrets.ROLE_NAME }}
   SESSION_NAME: gh-actions${{ github.run_id }}-${{ github.run_attempt }}
 jobs:
   deploy:
